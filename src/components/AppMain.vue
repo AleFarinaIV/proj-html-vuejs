@@ -19,25 +19,38 @@ export default {
         <div class="my_container">
             <div class="row">
                 <div class="col-6">
-                    <h1>Get Behind The Wheel</h1>
-                    <div class="pe-5">
-                        <span class="d-block pe-5 mb-4 lh-lg fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci ea, 
-                            doloribus libero voluptates cupiditate. Culpa adipisci ea, 
-                            doloribus libero voluptates cupiditate
-                        </span>
-                        <span class="d-block pe-5 fw-semibold fs-13">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci ea, 
-                            doloribus libero voluptates cupiditate est obcaecati repudiandae consequuntur 
-                            cumque ab blanditiis dolorem eius rem quibusdam sunt ipsa soluta numquam. Obcaecati repudiandae consequuntur 
-                            cumque ab blanditiis dolorem eius rem quibusdam sunt ipsa soluta numquam.
-                        </span>
+                    <div class="mt-3">
+                        <h1>Get Behind The Wheel</h1>
+                        <div class="pe-5">
+                            <span class="d-block pe-5 mb-4 lh-lg fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci ea, 
+                                doloribus libero voluptates cupiditate. Culpa adipisci ea, 
+                                doloribus libero voluptates cupiditate
+                            </span>
+                            <span class="d-block pe-5 fw-semibold lh-lg fs-13">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci ea, 
+                                doloribus libero voluptates cupiditate est obcaecati repudiandae consequuntur 
+                                cumque ab blanditiis dolorem eius rem quibusdam sunt ipsa soluta numquam. Obcaecati repudiandae consequuntur 
+                                cumque ab blanditiis dolorem eius rem quibusdam sunt ipsa soluta numquam.
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-6 position-relative">
                     <div class="my_card text-center">
                         <h4>First Lesson Free!</h4>
                         <span>When you make a block booking with us your first lesson is included free</span>
+                        <div class="form_control">
+                            <div class="d-flex mb-3">
+                                <input class="my_form" type="text" placeholder="Your name*">
+                                <div class="mini_size">
+                                    <img src="../assets/images/image.png" alt="">
+                                </div>
+                            </div>
+                            <input class="my_form mb-4" type="email" name="email" id="" placeholder="Email*">
+                            <input class="my_form mb-4" type="number" name="Telephone" id="" placeholder="Telephone">
+                            <input class="my_form mb-4" type="text" placeholder="Location">
+                            <button type="submit">REQUEST A CALLBACK</button>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -98,14 +111,67 @@ export default {
 
         .my_card {
             position: absolute;
-            top: -100px;
+            top: -95px;
             width: 400px;
-            height: 500px;
+            height: 480px;
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-top: 20px;
+
+            h4 {
+                color: #7ABC64;
+                margin: 20px 0;
+            }
+
+            span {
+                font-size: 12px;
+            }
+
+            .form_control {
+                position: relative;
+                margin-top: 30px;
+
+                .my_form {
+                    font-size: 10px;
+                    padding: 10px;
+                    width: 100%;
+                    border-radius: 3px;
+                    border: 1px solid #cccccc;
+                    background-color: #f2f2f2;
+                    margin-bottom: 10px;
+                }
+
+                .mini_size {
+                    width: 20px;
+                    height: 30px;
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+
+                    img {
+                        object-fit: cover;
+                        right: 10px;
+                        width: 50%;
+                        height: 50%;
+                        cursor: pointer;
+                    }
+                }
+
+                button {
+                font-size: 10px;
+                font-weight: 700;
+                background-color: #7ABC64;
+                color: #ffffff;
+                padding: 8px 25px;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            }
         }
     }
 }
