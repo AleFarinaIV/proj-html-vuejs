@@ -1,6 +1,15 @@
 <script>
+import HeaderMenuItem from "./HeaderMenuItem.vue"
+import { menu } from "../data/headerMenuData.js"
 export default {
-
+    components: {
+        HeaderMenuItem,
+    },
+    data() {
+        return {
+            menu,
+        }
+    }
 }
 
 </script>
@@ -26,25 +35,12 @@ export default {
                 <div class="col-8">
                     <div class="d-flex justify-content-end align-items-center">
                         <ul class="list-unstyled d-flex ms-3 text-white m-0">
-                            <li>
-                                <a href="#">HOME</a>
-                            </li>
-                            <li>
-                                <a  href="#">ABOUT</a>
-                            </li>
-                            <li>
-                                <a  href="#">PRICES</a>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <a  href="#">COURSES</a>
-                                <span class="label ms-2">NEW</span>
-                            </li>
-                            <li>
-                                <a  href="#">LOCATIONS</a>
-                            </li>
-                            <li>
-                                <a  href="#">BLOG</a>
-                            </li>
+                            <HeaderMenuItem 
+                            v-for="section, index in menu"
+                            :key="index" 
+                            :label="section.label"
+                            :active="section.active"
+                            :new="section.new"/>
                         </ul>
                         <button>
                             BOOK NOW
@@ -79,31 +75,6 @@ export default {
             img {
                 width: 100%;
                 height: 100%;
-            }
-        }
-
-        ul {
-
-            li {
-                margin-right: 55px;
-                font-size: 14px;
-                font-weight: 700;
-
-                a {
-                    color: #ffffff;
-                    text-decoration: none;
-
-                    &:hover {
-                        color: #7ABC64;
-                    }
-                }
-
-                .label {
-                    font-size: 9px;
-                    background-color: #7ABC64;
-                    padding: 2px 5px;
-                    border-radius: 5px;
-                }
             }
         }
         
