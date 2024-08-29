@@ -128,7 +128,7 @@ export default {
         .my_card {
             position: absolute;
             top: -55px;
-            left: 100px;
+            right: 0;
             width: 500px;
             height: 480px;
             background-color: #ffffff;
