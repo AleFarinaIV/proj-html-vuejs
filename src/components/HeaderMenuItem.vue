@@ -34,7 +34,7 @@ export default {
 
     li {
         margin-right: 55px;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
 
         a {
@@ -49,7 +49,7 @@ export default {
         }
 
         .label {
-            font-size: 9px;
+            font-size: 8px;
             background-color: #7ABC64;
             padding: 2px 5px;
             border-radius: 5px;

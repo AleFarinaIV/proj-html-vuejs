@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="top_header">
-        <div class="container text_grey">
+        <div class="my_container">
             <div class="d-flex justify-content-between">
                 <span>We have a 95% Successful Pass Rate!</span>
                 <span>
@@ -27,7 +27,7 @@ export default {
         </div>
     </div>
     <div class="bottom_header">
-        <div class="container">
+        <div class="my_container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="col-4 size">
                     <img src="../assets/images/avada-drivers-logo-2x-200x39.png" alt="">
@@ -59,7 +59,9 @@ export default {
         background-color: #494C4E;
         font-size: 14px;
 
-        .text_grey {
+        .my_container {
+            width: 1200px;
+            margin: 0 auto;
             color: rgb(160, 160, 160);
         }
     }
@@ -68,26 +70,33 @@ export default {
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.301);
 
-        .size {
-            width: 280px;
-            height: 50px;
+        .my_container {
+            width: 1200px;
+            margin: 0 auto;
 
-            img {
-                width: 100%;
-                height: 100%;
+            .size {
+                width: 300px;
+                height: 50px;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            button {
+                font-size: 14px;
+                font-weight: 700;
+                background-color: #7ABC64;
+                color: #ffffff;
+                padding: 7px 20px;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
             }
         }
+
         
-        button {
-            font-size: 14px;
-            font-weight: 700;
-            background-color: #7ABC64;
-            color: #ffffff;
-            padding: 7px 20px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
     }
 </style>
