@@ -19,7 +19,7 @@ export default {
         <div class="my_container">
             <div class="row">
                 <div class="col-6">
-                    <div class="mt-3">
+                    <div class="mt-5">
                         <h1>Get Behind The Wheel</h1>
                         <div class="pe-5">
                             <span class="d-block pe-5 mb-4 lh-lg fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci ea, 
@@ -55,6 +55,23 @@ export default {
             </div>
         </div>
     </div>
+    <div id="start_learning_container">
+        <div class="my_container">
+            <div class="content">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="left_content">
+                        <h1>Start Learning to Drive Today</h1>
+                        <span>Give us a call to schedule your first driving lesson</span>
+                    </div>
+                    <div class="right_content">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span> 1-800-555-555</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
   
 </template>
 
@@ -63,8 +80,7 @@ export default {
 #bg_jumbo_container {
     background-image: url("../assets/images/homepage-hero-background.jpg");
     height: 600px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     
     .my_container {
@@ -111,8 +127,9 @@ export default {
 
         .my_card {
             position: absolute;
-            top: -95px;
-            width: 400px;
+            top: -55px;
+            left: 100px;
+            width: 500px;
             height: 480px;
             background-color: #ffffff;
             border-radius: 10px;
@@ -171,6 +188,36 @@ export default {
                 transition: background-color 0.3s ease;
             }
 
+            }
+        }
+    }
+}
+
+#start_learning_container {
+    background-image: url("../assets/images/horizontal-cta-background.jpg");
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+
+
+    .my_container {
+        width: 1200px;
+        height: 250px;
+        margin: 0 auto;
+
+        .content {
+            padding-top: 100px;
+            color: white;
+
+            .left_content {
+                span {
+                    font-size: 20px;
+
+                }
+            }
+
+            .right_content {
+                font-size: 30px;
             }
         }
     }
