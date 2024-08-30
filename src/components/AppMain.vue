@@ -65,12 +65,73 @@ export default {
                     </div>
                     <div class="right_content">
                         <i class="bi bi-telephone-fill"></i>
-                        <span> 1-800-555-555</span>
+                        <span class="me-5"> 1-800-555-555</span>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="courses_instructors_container">
+        <div id="courses_container">
+            <div class="my_container">
+                <div class="row">
+                    <div class="col-4 position-relative">
+                        <div class="courses_info_card">
+                            <div class="mini_size">
+                                <img src="../assets/images/new-corner.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h2 class="mt-4">Courses</h2>
+                                <span class="d-block my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                    Accusamus tempore laborum quae aliquid! Doloremque nemo debitis delectus ea eveniet hic numquam nihil minima.
+                                </span>
+                                <button>COURSE INFORMATION</button>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div id="courses_options" class="d-flex justify-content-evenly mt-5">
+                            <div class="text-center">
+                                <img src="../assets/images/courses-passplus.jpg" alt="">
+                                <h5 class="mt-3">Pass Plus</h5>
+                                <button>LEARN MORE</button>
+                            </div>
+                            <div class="text-center">
+                                <img src="../assets/images/course-intensive.jpg" alt="">
+                                <h5 class="mt-3">Intensive Course</h5>
+                                <button>LEARN MORE</button>
+                            </div>
+                            <div class="text-center">
+                                <img src="../assets/images/courses-instructor.jpg" alt="">
+                                <h5 class="mt-3">Instructors</h5>
+                                <button>LEARN MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rate_cards_container">
+                <div class="my_container">
+                    <div class="d-flex justify-content-between position-relative">
+                        <div class="rate_card">
+                            <span>95%</span>
+                            <h6>PASS RATE</h6>
+                        </div>
+                        <div class="rate_card">
+                            <span>100%</span>
+                            <h6>REFERRAL RATE</h6>
+                        </div>
+                        <div class="rate_card">
+                            <span>0%</span>
+                            <h6>ACCIDENT RATE</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="triangle_bottom_container">
+        </div>
     </div>
   
 </template>
@@ -128,7 +189,7 @@ export default {
         .my_card {
             position: absolute;
             top: -55px;
-            right: 0;
+            right: 12px;
             width: 500px;
             height: 480px;
             background-color: #ffffff;
@@ -177,17 +238,16 @@ export default {
                 }
 
                 button {
-                font-size: 10px;
-                font-weight: 700;
-                background-color: #7ABC64;
-                color: #ffffff;
-                padding: 8px 25px;
-                border: none;
-                border-radius: 25px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-
+                    font-size: 10px;
+                    font-weight: 700;
+                    background-color: #7ABC64;
+                    color: #ffffff;
+                    padding: 8px 25px;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
             }
         }
     }
@@ -220,6 +280,116 @@ export default {
                 font-size: 30px;
             }
         }
+    }
+}
+
+#courses_instructors_container {
+    height: 1000px;
+
+    #courses_container {
+        background-image: url("../assets/images/promise-background.jpg");
+        height: 400px;
+        background-size: cover;
+        background-position: bottom;
+
+        .my_container {
+            width: 1200px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .courses_info_card {
+            position: absolute;
+            top: -25px;
+            width: 95%;
+            height: 350px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.233);
+
+            .mini_size {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                top: 0px;
+                left: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-top-left-radius: 5px;
+                }
+            }
+            
+            .content {
+                text-align: center;
+                padding: 20px;
+                span {
+                    padding: 20px;
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+
+                button {
+                    font-size: 10px;
+                    font-weight: 700;
+                    background-color: #7ABC64;
+                    color: #ffffff;
+                    padding: 8px 25px;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+            }
+        }
+
+        #rate_cards_container {
+
+            .my_container {
+                width: 1200px;
+                height: 135px;
+                margin: 0 auto;
+
+                .rate_card {
+                    position: absolute;
+                    top: 20px;
+                    width: calc(100% / 3);
+                    height: 350px;
+                    background-color: white;
+                    border-radius: 5px;
+                    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.233);
+                }
+            }
+        }
+
+        #courses_options {
+            color: rgb(63, 63, 66);
+
+            img {
+                width: 180px ;
+                height: 180px ;
+            }
+
+            button {
+                font-size: 10px;
+                font-weight: 600;
+                padding: 8px 25px;
+                border: 3px solid rgb(63, 63, 66);
+                border-radius: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #triangle_bottom_container {
+        width: 100%;
+        height: 135px;
+        background-color: #6b72721c;
+        background-image: url("../assets/images/latestnews-bottom.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
     }
 }
 
