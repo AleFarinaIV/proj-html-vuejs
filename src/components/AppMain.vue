@@ -130,7 +130,9 @@ export default {
                 </div>
             </div>
         </div>
-        <div id="triangle_bottom_container">
+        <div class="position-relative">
+            <div id="triangle_bottom_container">
+            </div>
         </div>
     </div>
   
@@ -311,7 +313,7 @@ export default {
                 width: 80px;
                 height: 80px;
                 position: absolute;
-                top: 0px;
+                top: 0;
                 left: 0;
 
                 img {
@@ -352,13 +354,32 @@ export default {
                 margin: 0 auto;
 
                 .rate_card {
-                    position: absolute;
+                    text-align: center;
+                    z-index: 3;
                     top: 20px;
-                    width: calc(100% / 3);
-                    height: 350px;
+                    width: calc(100% / 3 - 5px);
+                    height: 370px;
                     background-color: white;
-                    border-radius: 5px;
+                    border-radius: 8px;
                     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.233);
+                    border-top: 6px solid #7ABC64;
+
+                    span {
+                        display: inline-flex;
+                        justify-content: center;
+                        width: 160px;
+                        font-size: 40px;
+                        padding: 60px 90px;
+                        border: 8px solid #7ABC64;
+                        border-radius: 50%;
+                        margin-top: 45px;
+                        color: grey;
+                    }
+
+                    h6 {
+                        margin-top: 40px;
+                        color: grey;
+                    }
                 }
             }
         }
@@ -383,10 +404,12 @@ export default {
     }
 
     #triangle_bottom_container {
+        position: absolute;
+        top: -2px;
         width: 100%;
         height: 135px;
-        background-color: #6b72721c;
         background-image: url("../assets/images/latestnews-bottom.png");
+        filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(724%) hue-rotate(175deg) brightness(95%) contrast(96%);;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center bottom;
