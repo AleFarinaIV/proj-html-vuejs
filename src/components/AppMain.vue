@@ -71,7 +71,7 @@ export default {
             </div>
         </div>
     </div>
-    <div id="courses_instructors_container">
+    <div id="courses_rate_container">
         <div id="courses_container">
             <div class="my_container">
                 <div class="row">
@@ -134,8 +134,72 @@ export default {
             <div id="triangle_bottom_container">
             </div>
         </div>
+        
     </div>
-  
+    <div id="instructors_container">
+        <div class="my_container">
+            <div class="d-flex mb-4">
+                <div class="col-12">
+                    <h1>Your Instructors</h1>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="col-8">
+                    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Doloremque quia animi cum quasi aperiam! Neque consectetur perspiciatis non velit. 
+                        Ex omnis esse vel.
+                    </span>
+                </div>
+                <div class="col-4">
+                    <button>MORE ABOUT US</button>
+                </div>
+            </div>
+            <div id="instructors_cards_container">
+                <div class="my_container">
+                    <div class="d-flex justify-content-between">
+                        <div class="instructor_card">
+                            <div class="mini_size">
+                                <img src="../assets/images/instructor-mikehart.jpg" alt="">
+                            </div>
+                            <h5>Mike Hart</h5>
+                            <div>
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-twitter mx-3"></i>
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                        <div class="instructor_card">
+                            <div class="mini_size">
+                                <img src="../assets/images/instructor-johnsmith.jpg" alt="">
+                            </div>
+                            <h5>John Smith</h5>
+                            <div>
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-twitter mx-3"></i>
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                        <div class="instructor_card">
+                            <div class="mini_size">
+                                <img src="../assets/images/instructor-angelahart.jpg" alt="">
+                            </div>
+                            <h5>Angela Hart</h5>
+                            <div>
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-twitter mx-3"></i>
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 </template>
 
 <style scoped>
@@ -285,8 +349,8 @@ export default {
     }
 }
 
-#courses_instructors_container {
-    height: 1000px;
+#courses_rate_container {
+    height: 800px;
 
     #courses_container {
         background-image: url("../assets/images/promise-background.jpg");
@@ -413,6 +477,97 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center bottom;
+    }
+
+}
+
+#instructors_container {
+    padding-top: 60px;
+    height: 600px;
+
+    span {
+        font-size: 18px;
+        line-height: 38px;
+    }
+
+    .my_container {
+        width: 1200px;
+        height: 380px;
+        margin: 0 auto;
+        position: relative;
+
+        button {
+            float: right;
+            width: 90%;
+            font-size: 14px;
+            font-weight: 700;
+            background-color: #7ABC64;
+            color: #ffffff;
+            padding: 8px 65px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #instructors_cards_container {
+            position: absolute;
+            bottom: 0;
+
+            .my_container {
+                width: 1200px;
+                height: 135px;
+                margin: 0 auto;
+
+                .instructor_card:nth-child(2) {
+                    height: 440px;
+
+                    .mini_size {
+                        height: 190px;
+                    }
+                }
+
+                .instructor_card {
+                    text-align: center;
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-items: center;
+                    z-index: 3;
+                    top: 20px;
+                    width: calc(100% / 3 - 5px);
+                    height: 430px;
+                    background-color: white;
+                    border-radius: 8px;
+                    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.233);
+                    border-top: 6px solid #7ABC64;
+                    color: grey;
+
+                    .mini_size {
+                        width: 300px;
+                        height: 170px;
+                        margin-top: 40px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                
+                    h5 {
+                        margin-top: 35px;
+                        color: black;
+                    }
+
+                    span {
+                        padding: 0 27px;
+                        font-size: 15px;
+                    }
+                }
+            
+            }
+        }
     }
 }
 
