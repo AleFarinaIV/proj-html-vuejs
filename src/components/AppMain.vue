@@ -288,6 +288,48 @@ export default {
             </div>
         </div>
     </div>
+    <div id="latest_news_container">
+        <div class="my_container">
+            <div class="latest_news_card text-center">
+                <h1>Latest News</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="pt-4">
+                                <div class="img_resize">
+                                    <img src="../assets/images/blog-choosecar-700x441.jpg" alt="">
+                                </div>
+                                <div class="text_content">
+                                    <h4 class="green_text m-0">What Car to Start With?</h4>
+                                    <span>February 7th, 2019 | <span class="green_text">0 comments</span></span>
+                                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adpiscing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="pt-4">
+                                <div class="img_resize">
+                                    <img src="../assets/images/blogpost-10and2-700x441.jpg" alt="">
+                                </div>
+                                <div class="text_content">
+                                    <h4 class="green_text m-0">Avada Driving School Expanding</h4>
+                                    <span>February 7th, 2019 | <span class="green_text">0 comments</span></span>
+                                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adpiscing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center mt-5">
+                            <button>MORE FROM THE BLOG</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="news_bottom"></div>
+        </div>
+    </div>
 
 </template>
 
@@ -538,7 +580,7 @@ export default {
         }
 
         #courses_options {
-            color: rgb(63, 63, 66);
+            color: #7799AD;
 
             img {
                 width: 180px ;
@@ -549,7 +591,7 @@ export default {
                 font-size: 10px;
                 font-weight: 600;
                 padding: 8px 25px;
-                border: 3px solid rgb(63, 63, 66);
+                border: 3px solid #7799AD;
                 border-radius: 25px;
                 cursor: pointer;
             }
@@ -661,7 +703,7 @@ export default {
 
 #testimonials_container {
     background-image: url("../assets/images/testimonial-background.jpg");
-    height: 650px;
+    height: 720px;
     background-size: cover;
     color: grey;
 
@@ -675,7 +717,7 @@ export default {
     }
 
     .p-100 {
-        padding: 0 100px 50px 100px;
+        padding: 0 70px 50px 70px;
     }
 
     .carousel-indicators {
@@ -709,6 +751,81 @@ export default {
         border-radius: 50%;
         margin-top: 20px;
         margin-bottom: 30px;
+    }
+}
+
+#latest_news_container {
+    background-image: url("../assets/images/latestnews-background.jpg");
+    height: 750px;
+    background-size: cover;
+    padding-top: 80px;
+    background-position: bottom;
+
+    .green_text {
+        color:#7ABC64;
+    }
+
+    .my_container {
+        width: 1200px;
+        height: 635px;
+        margin: 0 auto;
+        position: relative;
+
+        .latest_news_card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -120px;
+            border-top: 6px solid #7799AD;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            background-color: white;
+            padding-top: 30px;
+
+            .img_resize {
+                width: 540px;
+                height: 300px;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .text_content {
+                margin-top: 20px;
+                color: grey;
+
+                span {
+                    font-size: 12px;
+                }
+            }
+
+            button {
+                    font-size: 14px;
+                    font-weight: 700;
+                    background-color: #7ABC64;
+                    color: #ffffff;
+                    padding: 8px 25px;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+        }
+
+        .news_bottom {
+            background-image: url("../assets/images/latestnews-bottom-1200x105.png");
+            width: 100%;
+            height: 150px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: -30px;
+        }
     }
 }
 
