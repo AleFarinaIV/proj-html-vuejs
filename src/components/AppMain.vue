@@ -330,6 +330,19 @@ export default {
             <div class="news_bottom"></div>
         </div>
     </div>
+    <div id="newsletter_container">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 w-50 d-flex flex-column justify-content-center text-center">
+                    <h1>Sign up to our Newsletter</h1>
+                    <input type="email">
+                    <button type="submit">SUBSCRIBE</button>
+                </div>
+                <p class="mt-4">(We do not share your data with anybody, and only use it for intended purpose)</p>
+            </div>
+        </div>
+
+    </div>
 
 </template>
 
@@ -825,6 +838,42 @@ export default {
             background-repeat: no-repeat;
             position: absolute;
             bottom: -30px;
+        }
+    }
+}
+
+#newsletter_container {
+    background-image: url("../assets/images/newsletter_background.jpg");
+    height: 450px;
+    background-size: cover;
+
+    .container {
+        padding-top: 50px;
+
+        input {
+            margin-top: 40px;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            border: 1px solid rgb(223, 223, 223);
+        }
+
+        button {
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            background-color: #7ABC64;
+            color: #ffffff;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        p {
+            color: grey;
         }
     }
 }
