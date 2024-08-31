@@ -17,7 +17,7 @@ export default {
                 </div>
                 <div class="col-3">
                     <ul class="text-secondary">
-                        <h6 class="text-white">CONTACT DETAILS</h6>
+                        <h6 class="text-white mb-4">CONTACT DETAILS</h6>
                         <li>
                             <div class="d-flex">
                                 <i class="bi bi-house-door-fill me-3 icons_color"></i>
@@ -44,13 +44,44 @@ export default {
                         </li>
                     </ul>
                 </div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
+                <div id="courses_list" class="col-3">
+                    <ul class="green_color">
+                        <h6 class="text-white mb-4">COURSES</h6>
+                        <li>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-regular fa-circle-right me-3"></i>
+                                <span>Pass Plus</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-regular fa-circle-right me-3"></i>
+                                <span>Intensive Course</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-regular fa-circle-right me-3"></i>
+                                <span>Automatic</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-regular fa-circle-right me-3"></i>
+                                <span>Instructor Training</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 d-flex flex-column align-items-center">
+                    <img class="img-fluid" src="../assets/images/footer-ad-grid.png" alt="">
+                    <button>BOOK NOW</button>
+                </div>
             </div>
         </div>
     </div>
     <div id="bottom_footer">
-
+        
     </div>
   
 </template>
@@ -60,6 +91,10 @@ export default {
 #top_footer {
     background-image: url("../assets/images/footer-background-color.jpg");
     background-size: cover;
+
+    .green_color {
+        color: #7ABC64;
+    }
 
     p {
         color: grey;
@@ -75,6 +110,19 @@ export default {
         transform: rotate(-90deg);
     }
 
+    button {
+        font-size: 14px;
+        font-weight: bolder;
+        background-color: #7ABC64;
+        color: white;
+        padding: 8px 28px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
     ul {
         list-style-type: none;
         padding: 0;
@@ -86,9 +134,15 @@ export default {
 
             span {
                 font-size: 14px;
-                padding-right: 80px;
+                padding-right: 90px;
                 line-height: 25px;
             }
+        }
+    }
+
+    #courses_list {
+        span {
+            font-size: 18px;
         }
     }
 }
