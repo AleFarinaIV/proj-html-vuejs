@@ -199,6 +199,95 @@ export default {
             
         </div>
     </div>
+    <div id="testimonials_container">
+        <div class="pt-5">
+            <h1 class="text-center">Testimonials</h1>
+            <span class="d-block text-center mb-4">Here's what our happy drivers had to say about our services</span>
+        </div>
+        <div class="carousel_container">
+            <div id="carouselExampleIndicators" class="carousel slide p-100" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="mini_size">
+                                <img src="../assets/images/testimonial-sophia.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="text-center text_content">
+                                <span class="d-block fst-italic mb-4">
+                                    Avada Driving School really helped build my confidence behind the wheel and with 
+                                    driving in general, and they got me a first time pass! Highly recommended.
+                                </span>
+                                <span class="fw-semibold">Sophia Jones</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="mini_size">
+                                <img src="../assets/images/testimonial-kelly.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="text-center text_content">
+                                <span class="d-block fst-italic mb-4">
+                                    Avada Driving School really helped build my confidence behind the wheel and with 
+                                    driving in general, and they got me a first time pass! Highly recommended.
+                                </span>
+                                <span class="fw-semibold">Kelly Stone</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="mini_size">
+                                <img src="../assets/images/testimonial-grant.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="text-center text_content">
+                                <span class="d-block fst-italic mb-4">
+                                    Avada Driving School really helped build my confidence behind the wheel and with 
+                                    driving in general, and they got me a first time pass! Highly recommended.
+                                </span>
+                                <span class="fw-semibold">Grant Wilshere</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="mini_size">
+                                <img src="../assets/images/testimonial-kate.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="text-center text_content">
+                                <span class="d-block fst-italic mb-4">
+                                    Avada Driving School really helped build my confidence behind the wheel and with 
+                                    driving in general, and they got me a first time pass! Highly recommended.
+                                </span>
+                                <span class="fw-semibold">Kate Middleton</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="mini_size">
+                                <img src="../assets/images/testimonial-harold.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="text-center text_content">
+                                <span class="d-block fst-italic mb-4">
+                                    Avada Driving School really helped build my confidence behind the wheel and with 
+                                    driving in general, and they got me a first time pass! Highly recommended.
+                                </span>
+                                <span class="fw-semibold">Harold Payne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </template>
 
@@ -483,7 +572,7 @@ export default {
 
 #instructors_container {
     padding-top: 60px;
-    height: 600px;
+    height: 670px;
 
     span {
         font-size: 18px;
@@ -565,9 +654,61 @@ export default {
                         font-size: 15px;
                     }
                 }
-            
             }
         }
+    }
+}
+
+#testimonials_container {
+    background-image: url("../assets/images/testimonial-background.jpg");
+    height: 650px;
+    background-size: cover;
+    color: grey;
+
+    h1 {
+        color: rgb(87, 87, 87);
+        margin-top: 90px;
+    }
+
+    h6 {
+        padding: 0 450px;
+    }
+
+    .p-100 {
+        padding: 0 100px 50px 100px;
+    }
+
+    .carousel-indicators {
+
+        button {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(128, 128, 128, 0);
+            border: 2px solid grey;
+        }
+
+        .active {
+            background-color: grey;
+        }
+    
+    }
+
+    .carousel-inner {
+        display: flex;
+        justify-content: space-between;
+
+        .text_content {
+            padding: 0 450px;
+        }
+    }
+
+    .mini_size {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
 }
 
