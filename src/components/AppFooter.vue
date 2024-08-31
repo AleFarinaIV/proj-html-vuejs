@@ -81,20 +81,33 @@ export default {
         </div>
     </div>
     <div id="bottom_footer">
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between">
+                    <span>© Copyright 2012-2020 | Avada Theme by <span class="green_color">ThemeFusion</span> | all Rights Reserved | Powered by <span class="green_color">WordPress</span></span>
+                    <div class="text-white fs-6">
+                        <i class="fa-brands fa-facebook-f me-4"></i>
+                        <i class="fa-brands fa-twitter me-4"></i>
+                        <i class="fa-brands fa-youtube me-4"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   
 </template>
 
 <style scoped>
 
+.green_color {
+    color: #7ABC64;
+}
+
 #top_footer {
     background-image: url("../assets/images/footer-background-color.jpg");
     background-size: cover;
 
-    .green_color {
-        color: #7ABC64;
-    }
 
     p {
         color: grey;
@@ -145,6 +158,13 @@ export default {
             font-size: 18px;
         }
     }
+}
+
+#bottom_footer {
+    background-color: rgb(29, 29, 29);
+    font-size: 10px;
+    padding: 50px;
+    color: rgb(95, 95, 95);
 }
 
 </style>
