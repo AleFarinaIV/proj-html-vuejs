@@ -607,6 +607,7 @@ export default {
                 border: 3px solid #7799AD;
                 border-radius: 25px;
                 cursor: pointer;
+                color: #7799AD;
             }
         }
     }
@@ -844,7 +845,7 @@ export default {
 
 #newsletter_container {
     background-image: url("../assets/images/newsletter_background.jpg");
-    height: 450px;
+    height: 380px;
     background-size: cover;
 
     .container {
