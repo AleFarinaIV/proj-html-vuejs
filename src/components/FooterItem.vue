@@ -60,6 +60,7 @@ export default {
                 font-size: 14px;
                 padding-right: 90px;
                 line-height: 25px;
+                cursor: pointer;
             }
         }
     }

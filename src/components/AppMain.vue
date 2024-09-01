@@ -25,10 +25,14 @@ export default {
 <template>
 
     <div id="bg_jumbo_container">
-        <div class="my_container">
-            <div class="overlay_text">
-                <h1>Drive with Avada</h1>
-                <span>We offer the finest driving tuition money can buy</span>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="overlay_text pt-">
+                        <h1>Drive with Avada</h1>
+                        <span>We offer the finest driving tuition money can buy</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -308,23 +312,15 @@ export default {
 
 #bg_jumbo_container {
     background-image: url("../assets/images/homepage-hero-background.jpg");
-    height: 600px;
     background-size: cover;
     background-position: center;
     
-    .my_container {
-        width: 1200px;
-        height: 500px;
-        margin: 0 auto;
-        position: relative;
+    .container {
+        padding: 250px 0;
         
         .overlay_text {
-            position: absolute;
-            top: 50%;
-            left: 0;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            z-index: 100;
 
             h1 {
                 font-size: 56px;
@@ -415,6 +411,10 @@ export default {
                     border-radius: 25px;
                     cursor: pointer;
                     transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #6fb161;
+                    }
                 }
             }
         }
@@ -508,6 +508,10 @@ export default {
                     border-radius: 25px;
                     cursor: pointer;
                     transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #6fb161;
+                    }
                 }
             }
         }
@@ -566,6 +570,11 @@ export default {
                 border-radius: 25px;
                 cursor: pointer;
                 color: #7799AD;
+
+                &:hover {
+                    color: #7ABC64;
+                    border: 3px solid #7ABC64;
+                }
             }
         }
     }
@@ -611,6 +620,10 @@ export default {
             border-radius: 25px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #6fb161;
+            }
         }
 
         #instructors_cards_container {
@@ -655,6 +668,10 @@ export default {
                             height: 100%;
                             object-fit: cover;
                             object-position: center;
+
+                            &:hover {
+                                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.308);
+                            }
                         }
                     }
                 
@@ -785,16 +802,20 @@ export default {
             }
 
             button {
-                    font-size: 14px;
-                    font-weight: 700;
-                    background-color: #7ABC64;
-                    color: #ffffff;
-                    padding: 8px 25px;
-                    border: none;
-                    border-radius: 25px;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
+                font-size: 14px;
+                font-weight: 700;
+                background-color: #7ABC64;
+                color: #ffffff;
+                padding: 8px 25px;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #6fb161;
                 }
+            }
         }
 
         .news_bottom {
@@ -837,6 +858,10 @@ export default {
             border-radius: 25px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #6fb161;
+            }
         }
 
         p {

@@ -23,7 +23,7 @@ export default {
 
 <template>
 
-    <li class="d-flex align-items-center">
+    <li class="d-flex justify-content-end align-items-center">
         <a href="#" :class="{'active' : active}" >{{ label }}</a>
         <span v-if="new" class="label ms-2">NEW</span>
     </li>
@@ -33,8 +33,8 @@ export default {
 <style scoped>
 
     li {
-        margin-right: 55px;
-        font-size: 13px;
+        margin-right: 50px;
+        font-size: 16px;
         font-weight: 700;
 
         a {

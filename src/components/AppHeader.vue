@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="top_header">
-        <div class="my_container">
+        <div class="container">
             <div class="d-flex justify-content-between">
                 <span>We have a 95% Successful Pass Rate!</span>
                 <span>
@@ -27,24 +27,26 @@ export default {
         </div>
     </div>
     <div class="bottom_header">
-        <div class="my_container">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="col-4 size">
-                    <img src="../assets/images/avada-drivers-logo-2x-200x39.png" alt="">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-4">
+                    <img src="../assets/images/avada-drivers-logo-2x-300x58.png" alt="">
                 </div>
                 <div class="col-8">
-                    <div class="d-flex justify-content-end align-items-center">
-                        <ul class="list-unstyled d-flex ms-3 text-white m-0">
-                            <HeaderMenuItem 
-                            v-for="section, index in menu"
-                            :key="index" 
-                            :label="section.label"
-                            :active="section.active"
-                            :new="section.new"/>
-                        </ul>
-                        <button>
-                            BOOK NOW
-                        </button>
+                    <div class="row align-items-center">
+                        <div class="col-12 d-flex justify-content-between">
+                            <ul class="list-unstyled d-flex ms-3 text-white m-0">
+                                <HeaderMenuItem 
+                                v-for="section, index in menu"
+                                :key="index" 
+                                :label="section.label"
+                                :active="section.active"
+                                :new="section.new"/>
+                            </ul>
+                            <button>
+                                BOOK NOW
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,9 +61,7 @@ export default {
         background-color: #494C4E;
         font-size: 14px;
 
-        .my_container {
-            width: 1200px;
-            margin: 0 auto;
+        .container {
             color: rgb(160, 160, 160);
         }
     }
@@ -70,30 +70,22 @@ export default {
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.301);
 
-        .my_container {
-            width: 1200px;
-            margin: 0 auto;
-
-            .size {
-                width: 300px;
-                height: 50px;
-    
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+        .container {
 
             button {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 700;
                 background-color: #7ABC64;
                 color: #ffffff;
-                padding: 7px 20px;
+                padding: 7px 24px;
                 border: none;
                 border-radius: 25px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #6fb161;
+                }
             }
         }
 

@@ -60,6 +60,9 @@ export default {
 
 <style scoped>
 
+.green_color {
+    color: #7ABC64;
+}
 
 #top_footer {
     background-image: url("../assets/images/footer-background-color.jpg");
@@ -83,6 +86,10 @@ export default {
         cursor: pointer;
         margin-top: 25px;
         transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #6fb161;
+        }
     }
 
     #courses_list {
@@ -97,6 +104,14 @@ export default {
     font-size: 10px;
     padding: 50px;
     color: rgb(95, 95, 95);
+
+    i {
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(201, 201, 201);
+        }
+    }
 }
 
 </style>
