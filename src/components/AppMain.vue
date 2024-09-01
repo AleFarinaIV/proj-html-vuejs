@@ -1,6 +1,23 @@
 <script>
+import { carousel_data } from "../data/carouselData"
 export default {
-    
+    methods: {
+        isActive(index) {
+            return index === this.currentIndex
+        },
+        nextSlide() {
+            this.currentIndex = (this.currentIndex + 1) % this.carousel_data.length;
+        },
+        prevSlide() {
+          this.currentIndex = (this.currentIndex - 1 + this.carousel_data.length) % this.carousel_data.length;
+        }
+    },
+    data() {
+        return {
+            carousel_data,
+            currentIndex: 0,
+        }
+    }
 }
 
 </script>
@@ -214,73 +231,14 @@ export default {
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div v-for="slide, index in carousel_data" :key="index" class="carousel-item" :class="{'active' : isActive(index)}">
                         <div class="d-flex flex-column align-items-center">
                             <div class="mini_size">
-                                <img src="../assets/images/testimonial-sophia.png" class="d-block w-100" alt="...">
+                                <img :src="slide.img" class="d-block w-100" :alt="slide.name">
                             </div>
                             <div class="text-center text_content">
-                                <span class="d-block fst-italic mb-4">
-                                    Avada Driving School really helped build my confidence behind the wheel and with 
-                                    driving in general, and they got me a first time pass! Highly recommended.
-                                </span>
-                                <span class="fw-semibold">Sophia Jones</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="mini_size">
-                                <img src="../assets/images/testimonial-kelly.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="text-center text_content">
-                                <span class="d-block fst-italic mb-4">
-                                    Avada Driving School really helped build my confidence behind the wheel and with 
-                                    driving in general, and they got me a first time pass! Highly recommended.
-                                </span>
-                                <span class="fw-semibold">Kelly Stone</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="mini_size">
-                                <img src="../assets/images/testimonial-grant.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="text-center text_content">
-                                <span class="d-block fst-italic mb-4">
-                                    Avada Driving School really helped build my confidence behind the wheel and with 
-                                    driving in general, and they got me a first time pass! Highly recommended.
-                                </span>
-                                <span class="fw-semibold">Grant Wilshere</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="mini_size">
-                                <img src="../assets/images/testimonial-kate.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="text-center text_content">
-                                <span class="d-block fst-italic mb-4">
-                                    Avada Driving School really helped build my confidence behind the wheel and with 
-                                    driving in general, and they got me a first time pass! Highly recommended.
-                                </span>
-                                <span class="fw-semibold">Kate Middleton</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="mini_size">
-                                <img src="../assets/images/testimonial-harold.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="text-center text_content">
-                                <span class="d-block fst-italic mb-4">
-                                    Avada Driving School really helped build my confidence behind the wheel and with 
-                                    driving in general, and they got me a first time pass! Highly recommended.
-                                </span>
-                                <span class="fw-semibold">Harold Payne</span>
+                                <span class="d-block fst-italic mb-4">{{ slide.text }}</span>
+                                <span class="fw-semibold">{{ slide.name }}</span>
                             </div>
                         </div>
                     </div>
@@ -756,6 +714,14 @@ export default {
 
         .text_content {
             padding: 0 450px;
+        }
+
+        .carousel-item {
+          display: none;
+        }
+
+        .carousel-item.active {
+          display: block;
         }
     }
 
