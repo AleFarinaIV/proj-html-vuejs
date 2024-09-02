@@ -20,8 +20,7 @@ export default {
             <div class="d-flex justify-content-between">
                 <span>We have a 95% Successful Pass Rate!</span>
                 <span>
-                    <i class="bi bi-telephone-fill"></i>
-                    Give us a call to book your tuition! 1-800-555-555
+                    <i class="bi bi-telephone-fill rotate_x me-1"></i> Give us a call to book your tuition! 1-800-555-555
                 </span>
             </div>
         </div>
@@ -63,6 +62,11 @@ export default {
 
         .container {
             color: rgb(160, 160, 160);
+
+            .rotate_x {
+                transform: rotate(-90deg);
+            }
+
         }
     }
 

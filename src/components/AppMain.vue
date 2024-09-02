@@ -10,12 +10,22 @@ export default {
         },
         prevSlide() {
           this.currentIndex = (this.currentIndex - 1 + this.carousel_data.length) % this.carousel_data.length;
-        }
+        },
+        getCircleStyle(percentage) {
+            return {
+        '--percentage': `${percentage}`,
+      };
+    },
     },
     data() {
         return {
             carousel_data,
             currentIndex: 0,
+            rates: [
+                { label: 'PASS RATE', value: 95 },
+                { label: 'REFERRAL RATE', value: 100 },
+                { label: 'ACCIDENT RATE', value: 0 }
+            ]
         }
     }
 }
@@ -108,23 +118,22 @@ export default {
                                 </span>
                                 <button>COURSE INFORMATION</button>
                             </div>
-
                         </div>
                     </div>
                     <div class="col-8">
                         <div id="courses_options" class="d-flex justify-content-evenly mt-5">
                             <div class="text-center">
-                                <img src="../assets/images/courses-passplus.jpg" alt="">
+                                <img src="../assets/images/courses-passplus.jpg" alt="courses_passplus">
                                 <h5 class="mt-3">Pass Plus</h5>
                                 <button>LEARN MORE</button>
                             </div>
                             <div class="text-center">
-                                <img src="../assets/images/course-intensive.jpg" alt="">
+                                <img src="../assets/images/course-intensive.jpg" alt="course_intensive">
                                 <h5 class="mt-3">Intensive Course</h5>
                                 <button>LEARN MORE</button>
                             </div>
                             <div class="text-center">
-                                <img src="../assets/images/courses-instructor.jpg" alt="">
+                                <img src="../assets/images/courses-instructor.jpg" alt="courses_instructor">
                                 <h5 class="mt-3">Instructors</h5>
                                 <button>LEARN MORE</button>
                             </div>
@@ -134,20 +143,16 @@ export default {
             </div>
             <div id="rate_cards_container">
                 <div class="my_container">
-                    <div class="d-flex justify-content-between position-relative">
-                        <div class="rate_card">
-                            <span>95%</span>
-                            <h6>PASS RATE</h6>
-                        </div>
-                        <div class="rate_card">
-                            <span>100%</span>
-                            <h6>REFERRAL RATE</h6>
-                        </div>
-                        <div class="rate_card">
-                            <span>0%</span>
-                            <h6>ACCIDENT RATE</h6>
-                        </div>
+                <div class="d-flex justify-content-between position-relative">
+                    <div class="rate_card" v-for="rate, index in rates" :key="index">
+                    <span class="grey_circle">
+                        <span class="green_circle" :style="getCircleStyle(rate.value)">
+                        <span class="percentage">{{ rate.value }}%</span>
+                        </span>
+                    </span>
+                    <h6>{{ rate.label }}</h6>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -180,7 +185,7 @@ export default {
                     <div class="d-flex justify-content-between">
                         <div class="instructor_card">
                             <div class="mini_size">
-                                <img src="../assets/images/instructor-mikehart.jpg" alt="">
+                                <img src="../assets/images/instructor-mikehart.jpg"  title="instructor-mikehart">
                             </div>
                             <h5>Mike Hart</h5>
                             <div>
@@ -192,7 +197,7 @@ export default {
                         </div>
                         <div class="instructor_card">
                             <div class="mini_size">
-                                <img src="../assets/images/instructor-johnsmith.jpg" alt="">
+                                <img src="../assets/images/instructor-johnsmith.jpg"  title="instructor-johnsmith">
                             </div>
                             <h5>John Smith</h5>
                             <div>
@@ -204,7 +209,7 @@ export default {
                         </div>
                         <div class="instructor_card">
                             <div class="mini_size">
-                                <img src="../assets/images/instructor-angelahart.jpg" alt="">
+                                <img src="../assets/images/instructor-angelahart.jpg"  title="instructor-angelahart">
                             </div>
                             <h5>Angela Hart</h5>
                             <div>
@@ -534,20 +539,51 @@ export default {
                     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.233);
                     border-top: 6px solid #7ABC64;
 
-                    span {
+                    .grey_circle {
+                        position: relative;
                         display: inline-flex;
                         justify-content: center;
-                        width: 160px;
-                        font-size: 40px;
-                        padding: 60px 90px;
-                        border: 8px solid #7ABC64;
-                        border-radius: 50%;
-                        margin-top: 45px;
+                        align-items: center;
+                        margin-top: 158px;
                         color: grey;
+                        
+                        .green_circle {
+                            position: absolute;
+                            width: 180px;
+                            height: 180px;
+                            border-radius: 50%;
+                            font-size: 46px;
+                            line-height: 144px;
+                            text-align: center;
+                            background: white;
+                            border: 8px solid transparent;
+                            background-clip: padding-box;
+                            z-index: 1;
+                        }
+                        .green_circle::before {
+                            content: '';
+                            position: absolute;
+                            top: -4px;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            background: conic-gradient(#7abc64 calc(var(--percentage) * 1%), rgb(197, 197, 197) 0);
+                            mask: radial-gradient(farthest-side, transparent calc(100% - 8px), rgb(230, 230, 230) calc(100% - 8px));
+                            -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 8px), rgb(197, 197, 197) calc(100% - 8px));
+                            z-index: -1;
+                        }
+
+                        .percentage {
+                            z-index: 2;
+                            margin-top: 10px;
+                            position: relative;
+                            color: grey;
+                        }
                     }
 
                     h6 {
-                        margin-top: 40px;
+                        margin-top: 100px;
                         color: grey;
                     }
                 }
@@ -843,7 +879,6 @@ export default {
             border-radius: 5px;
             padding: 10px 20px;
             font-size: 16px;
-            color: #ffffff;
             border: 1px solid rgb(223, 223, 223);
         }
 
